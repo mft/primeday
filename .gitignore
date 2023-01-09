@@ -1,0 +1,13 @@
+# python
+__pycache__
+
+# auto-generated
+_version.py
+
+# built
+dist
+*.egg-info
+
+# calendar files
+*.ics
+*.ical

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "primeday"
+description = "A prime day is the day which the number YYYYMMDD is prime."
+readme = "README.rst"
+license = {file = "License.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "icalendar>=5"
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "primeday._version.__version__"}
+
+[tool.setuptools_scm]
+write_to = "src/primeday/_version.py"
+version_scheme = "python-simplified-semver"
+local_scheme = "no-local-version"
