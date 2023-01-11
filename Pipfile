@@ -1,0 +1,9 @@
+[packages]
+icalendar=">=5"
+
+[dev-packages]
+setuptools_scm=">=6.2"
+build="*"
+
+[requires]
+python_version="3.11"
