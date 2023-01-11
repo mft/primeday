@@ -9,7 +9,7 @@ import itertools
 from ._version import __version__
 
 
-def isprime(yyyymmdd:int)->bool:
+def isprime(yyyymmdd):
     """
     Return True if yyyymmdd < 25000000 is prime.
     """
@@ -21,7 +21,7 @@ def isprime(yyyymmdd:int)->bool:
     return True
 
 
-def primedaysafter(date: datetime.date):
+def primedaysafter(date):
     """
     generate all prime days after given date (inclusive).
 
@@ -35,7 +35,7 @@ def primedaysafter(date: datetime.date):
         date += delta1d
 
 
-def primedaysforyear(year:int):
+def primedaysforyear(year):
     """
     generate all prime days for given year.
 
