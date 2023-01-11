@@ -15,7 +15,7 @@ def isprime(yyyymmdd:int)->bool:
     """
     limit:int = 5000 # = sqrt(25 * pow(10, 6))
     # trial division by 2 and odd numbers
-    for prime in itertools.chain((2,), range(3, limit)):
+    for prime in itertools.chain((2,), range(3, limit, 2)):
         if yyyymmdd % prime == 0:
             return False
     return True
