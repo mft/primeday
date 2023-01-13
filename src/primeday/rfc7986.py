@@ -64,7 +64,7 @@ def output_ical(year, output):
     Given output should be binary writable IO.
 
     Currently, the result file is readable by Thunderbird,
-    but not readable by Apple.
+    but Apple Calendar app usually rejects some obscure reason.
     """
     calendar = createprimedaycalendarforyear(year)
     output.write(calendar.to_ical())
