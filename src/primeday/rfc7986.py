@@ -46,7 +46,10 @@ def createprimedaycalendarforyear(year):
         event.add('dtstart', day)
         # uuid is recommended as uid in rfc 7986
         event.add('uid', str(uuid4()))
-        # summary, transp: optional
+        # created, last-modified, sequence, summary, transp: optional
+        event.add('created', now)
+        event.add('last-modified', now)
+        event.add('sequence', 0)
         event.add('summary', f'{_ordinal_en(i)} Prime Day', parameters={"language":"en"})
         event.add('transp', "TRANSPARENT")
         calendar.add_component(event)
