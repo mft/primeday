@@ -30,6 +30,27 @@ MIT (see License.txt)
 usage
 -----
 
-This package includes generators of prime days (one for given year
-and one for up to 2500-01-01), and an icalendar output module (rfc5545.py)
-for example usage.
+This package includes generators of prime days
+
+The next example prints all prime days from today to Jan 1st 2500,
+which itself is not a prime day.
+
+```
+from datetime import date
+from primeday.primeday import primedaysafter
+
+for day in primedaysafter(date.today()):
+    print(day)
+```
+
+The next example prints all prime days in this year.
+
+```
+from datetime import date
+from primeday.primeday import primedaysforyear
+
+for day in primedaysforyear(date.today().year):
+    print(day)
+```
+
+icalendar output modules (rfc5545.py, rfc7986.py) show example usage.
